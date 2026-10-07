@@ -205,3 +205,12 @@ h3{
 .character[data-house="slytherin"]  { --house: #2a623d; }
 .character[data-house="ravenclaw"]  { --house: #222f5b; }
 .character[data-house="hufflepuff"] { --house: #ecb939; }
+@media (max-width: 600px) {
+    #heading {
+        font-size: 1.1rem;
+        height: auto;
+        padding: 1rem;
+        letter-spacing: 1px;   
+        text-align: center;
+    }
+}
