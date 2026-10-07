@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #151515;
+    color: white;
+    font-family: var(--font-body);
+}
+:root {
+    --gold: #e5bd63;
+    --gold-dark: #b88b35;
+    --gold-light: #ffda75;
+    --card: #242424;
+    --glow: 0 8px 20px rgba(229, 189, 99, 0.2);
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Lato', Arial, sans-serif;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-family: var(--font-heading);
+    color: rgb(198, 189, 198);
+    border-color: var(--gold-light);
+    box-shadow: 0 8px 20px rgba(229,189,99,0.2);
+    gap: 2rem;
+    letter-spacing: 2px;
+}
+#result{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 3rem auto 0;
+    padding: 0 25px;
+}
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+ #menu img {
+    width: 70%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+#readbook,
+#spell,
+#charcters {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-color: var(--gold-light);
+    box-shadow: 0 8px 20px rgba(229,189,99,0.2);
+}
+#readbook:hover,
+#spell:hover,
+#charcters:hover{
+     transform: translateY(-5px);
+}
+h3{
+    margin-top: 10px;
+}
+.book-card,
+.magic-spell,
+.character {
+    background: var(--card);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.book-card:hover,
+.magic-spell:hover,
+.character:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-light);
+    box-shadow: var(--glow);
+}
+
+.book-card img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: #202020;
+}
+
+.book-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-info h2 {
+    color: var(--gold);
+    font-size: 24px;
+    overflow-wrap: break-word;
+}
+
+.book-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.read-btn {
+    margin-top: auto;
+    padding: 12px;
+    background: var(--gold-dark);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.magic-spell {
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--gold-dark);
+    display: flex;
+    flex-direction: column;
+}
+.magic-spell h3 {
+    color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10px;
+}
+.character img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.character h2 {
+    color: var(--gold);
+    font-size: 20px;
+    padding: 0 16px;
+}
+
+.character p {
+    padding: 0 16px;
+    line-height: 1.6;
+}
+
+.character {
+    padding-bottom: 16px;
+}
+.search{
+    background-color:  #212114;
+    border-width: 2px;
+    border-color: #efdbb5;
+    box-shadow: #131212;
+    color:  #e7e7de;
+    width: 20rem;
+    height: 2rem;
+    padding: 8px;
+}
+.hide{
+    display: none;
+}
+[hidden] {
+    display: none !important;
+}
+#homeBtn{
+    background-color:#b27d1b;
+    border-width: 2px;
+    border-color: #080808;
+    box-shadow: #131212;
+    border-radius: 2rem;
+    color:  #e7e7de;
+    padding: 8px;
+    width: 6rem;
+    height: 2rem;
+    
+}
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.character {
+    border-top: 4px solid var(--house, var(--gold-dark));
+}
+
+.character[data-house="gryffindor"] { --house: #ae0001; }
+.character[data-house="slytherin"]  { --house: #2a623d; }
+.character[data-house="ravenclaw"]  { --house: #222f5b; }
+.character[data-house="hufflepuff"] { --house: #ecb939; }
