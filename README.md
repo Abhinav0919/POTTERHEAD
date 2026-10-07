@@ -2,7 +2,7 @@
 
 A Harry Potter explorer web app. Browse all the books, spells and characters from a public API, search through them, and use it on any screen size.
 
-**Live demo:** https://YOUR-USERNAME.github.io/potterhead/
+**Live demo:** https://Abhinav0919.github.io/potterhead/
 
 ## Features
 
